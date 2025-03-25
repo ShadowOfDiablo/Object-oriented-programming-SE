@@ -239,14 +239,14 @@ public:
     MyDouble(int a, int b) : a(a), b(b)
     {}
     
-    MyDouble& operator++()
+    MyDouble& operator++() // prefix
     {
         a++; // update the state of the object
         b++;
         return *this;
     }
     
-    MyDouble operator++(int dummy)
+    MyDouble operator++(int dummy) // postfix
     {
         MyDouble temp = *this; // copy the current state of the object
         a++; // update the state of the object
